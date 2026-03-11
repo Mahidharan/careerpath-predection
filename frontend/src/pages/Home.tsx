@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { BrainCircuit, Compass, LineChart, Sparkles, Target, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -6,9 +5,9 @@ import { motion } from 'framer-motion';
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-[85vh] py-12">
-      
+
       {/* Hero Section */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -18,14 +17,14 @@ const Home = () => {
           <Sparkles className="w-4 h-4" />
           <span className="text-sm font-medium">Machine Learning Powered</span>
         </div>
-        
+
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
           Find Your Perfect <br className="hidden md:block" />
           <span className="text-gradient">Career Path</span>
         </h1>
-        
+
         <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Navigate your future with AI. Input your skills, interests, and logic scores 
+          Navigate your future with AI. Input your skills, interests, and logic scores
           to get a data-driven prediction for the tech career that suits you best.
         </p>
 
@@ -48,7 +47,7 @@ const Home = () => {
       </motion.div>
 
       {/* Feature Grid */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Database, Github, Terminal } from 'lucide-react';
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
           <Terminal className="w-5 h-5" />
           <span className="text-sm font-medium text-slate-300">Career Prediction</span>
         </div>
-        
+
         <p className="text-sm">
           Powered by React, Tailwind & Flask + Scikit-Learn
         </p>

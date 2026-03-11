@@ -1,10 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Database, Code2, Server } from 'lucide-react';
 
 const About = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -28,10 +27,10 @@ const About = () => {
             <h2 className="text-2xl font-bold">The Machine Learning Model</h2>
           </div>
           <p className="text-slate-300 leading-relaxed mb-4">
-            FuturePath utilizes a <strong>Random Forest Classifier</strong> built with Scikit-Learn. 
-            Random Forest is an ensemble learning method that operates by constructing a multitude 
-            of decision trees during training. It outputs the class that is the mode 
-            of the classes output by individual trees, providing highly accurate and stable predictions 
+            FuturePath utilizes a <strong>Random Forest Classifier</strong> built with Scikit-Learn.
+            Random Forest is an ensemble learning method that operates by constructing a multitude
+            of decision trees during training. It outputs the class that is the mode
+            of the classes output by individual trees, providing highly accurate and stable predictions
             resilient to overfitting.
           </p>
         </div>
@@ -44,15 +43,15 @@ const About = () => {
             <h2 className="text-2xl font-bold">The Data</h2>
           </div>
           <p className="text-slate-300 leading-relaxed">
-            The model is trained on a synthesized dataset mapping individuals' cognitive 
-            abilities (logic, creativity, math) and specific interests (design, business, technology) 
-            to ideal target careers in the tech industry: Software Engineer, Data Scientist, 
+            The model is trained on a synthesized dataset mapping individuals' cognitive
+            abilities (logic, creativity, math) and specific interests (design, business, technology)
+            to ideal target careers in the tech industry: Software Engineer, Data Scientist,
             Cybersecurity Analyst, AI Engineer, UI/UX Designer, and Business Analyst.
           </p>
         </div>
 
         <h2 className="text-2xl font-bold text-center mt-12 mb-8">Technology Stack</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="glass-card p-6 flex flex-col gap-3">
             <div className="flex items-center gap-3 text-slate-200">
@@ -67,7 +66,7 @@ const About = () => {
               <li>Framer Motion (Animations)</li>
             </ul>
           </div>
-          
+
           <div className="glass-card p-6 flex flex-col gap-3">
             <div className="flex items-center gap-3 text-slate-200">
               <Server className="text-emerald-400" />

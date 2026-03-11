@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Table, Database, Terminal } from 'lucide-react';
+import { Database, Terminal } from 'lucide-react';
 
 interface DatasetInfo {
   total_rows: number;
@@ -18,7 +18,7 @@ const Dataset = () => {
       try {
         const response = await fetch('http://localhost:5000/dataset_info');
         const json = await response.json();
-        
+
         if (json.success) {
           setData(json);
         } else {
@@ -35,7 +35,7 @@ const Dataset = () => {
   }, []);
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
       className="max-w-6xl mx-auto py-8"
