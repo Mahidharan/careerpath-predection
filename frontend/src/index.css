@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f172a; /* slate-900 */
+  --color-foreground: #f8fafc; /* slate-50 */
+  --color-primary: #3b82f6; /* blue-500 */
+  --color-secondary: #8b5cf6; /* violet-500 */
+  --color-accent: #10b981; /* emerald-500 */
+  --color-surface: rgba(30, 41, 59, 0.7); /* slate-800 with opacity */
+  --color-surface-hover: rgba(30, 41, 59, 0.9);
+}
+
+@layer base {
+  body {
+    background-color: theme('colors.slate.950');
+    color: theme('colors.slate.50');
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Utilities for Glassmorphism */
+@layer utilities {
+  .glass-card {
+    @apply bg-surface backdrop-blur-md border border-slate-700/50 rounded-2xl shadow-xl;
+  }
+  
+  .glass-panel {
+    @apply bg-slate-900/60 backdrop-blur-lg border border-slate-700/50 rounded-3xl shadow-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-violet-400 to-emerald-400;
+  }
+  
+  .bg-gradient-main {
+    @apply bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950;
+  }
+}
+
+/* Slider Custom Styles */
+input[type=range] {
+  -webkit-appearance: none;
+  @apply w-full h-2 rounded-full cursor-pointer bg-slate-700;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @apply h-5 w-5 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50 border-2 border-slate-900 cursor-pointer;
+  transition: transform 0.1s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  @apply transform scale-125 bg-blue-400;
+}
